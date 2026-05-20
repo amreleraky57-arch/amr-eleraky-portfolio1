@@ -1,0 +1,42 @@
+STEPS - طريقة الرفع
+
+1) فك ضغط الملف ZIP.
+2) ادخل فولدر amr-eleraky-portfolio.
+3) استبدل الصورة:
+   assets/amr-profile.png
+   بصورتك الحقيقية بنفس الاسم.
+
+4) ارفع على GitHub:
+   - افتح الريبو: amr-eleraky-portfolio
+   - Upload files
+   - اسحب كل الملفات داخل فولدر amr-eleraky-portfolio
+   - Commit changes
+
+أو من CMD:
+cd /d "%USERPROFILE%\Downloads\amr-eleraky-portfolio"
+git init
+git branch -M main
+git remote add origin https://github.com/amreleraky57-arch/amr-eleraky-portfolio.git
+git add .
+git commit -m "Initial portfolio upload"
+git push -u origin main
+
+لو ظهر remote موجود:
+git remote remove origin
+git remote add origin https://github.com/amreleraky57-arch/amr-eleraky-portfolio.git
+git push -u origin main
+
+5) Deploy على Vercel:
+   - Add New Project
+   - اختار GitHub repo
+   - Framework: Other
+   - Build Command: اتركه فاضي
+   - Output Directory: اتركه فاضي
+   - Deploy
+
+ملاحظة:
+نموذج التواصل يعمل Mailto افتراضيًا.
+لو عايز EmailJS فعّل القيم داخل index.html:
+EMAILJS_PUBLIC_KEY
+EMAILJS_SERVICE_ID
+EMAILJS_TEMPLATE_ID
