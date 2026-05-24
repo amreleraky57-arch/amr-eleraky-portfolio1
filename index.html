@@ -1,1 +1,1093 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="Xk4DXmWfuCVVHAW3S84u0qvsZAqdDPFGsFFAWrR15Cw" />
+  
+  <title data-i18n="meta_title">عمرو العراقي | مطوّر برمجيات Python وFull Stack لأنظمة ERP وCRM</title>
+  <meta name="description" data-i18n="meta_desc" content="عمرو العراقي مطوّر برمجيات متخصص في بناء أنظمة ERP وCRM، تطبيقات سطح مكتب Python، لوحات تحكم React وNode.js، وقواعد بيانات SQLite وMongoDB للشركات والمراكز التعليمية." />
+  <meta name="keywords" content="Amr Eleraky, Software Engineer, Python Developer, Full Stack Developer, ERP, CRM, React, Node.js, SQLite, MongoDB, CustomTkinter, Egypt Developer" />
+  <meta name="author" content="Amr Eleraky" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#080c14" />
 
+  <link rel="canonical" href="https://amr-eleraky.vercel.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_EG" id="og_locale" />
+  <meta property="og:title" data-i18n="meta_title" content="عمرو العراقي | مطوّر برمجيات Python وFull Stack" />
+  <meta property="og:description" data-i18n="meta_desc" content="Portfolio رسمي لعمرو العراقي — مطوّر أنظمة ERP وCRM وتطبيقات ويب وسطح مكتب." />
+  <meta property="og:url" content="https://amr-eleraky.vercel.app/" />
+  <meta property="og:site_name" content="Amr Eleraky Portfolio" />
+  <meta property="og:image" content="https://amreleraky57-arch.github.io/amr-eleraky-portfolio1/assets/preview.png" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" data-i18n="meta_title" content="عمرو العراقي | مطوّر برمجيات Python وFull Stack" />
+  <meta name="twitter:description" data-i18n="meta_desc" content="مطوّر أنظمة ERP وCRM وتطبيقات ويب وسطح مكتب." />
+  <meta name="twitter:image" content="https://amreleraky57-arch.github.io/amr-eleraky-portfolio1/assets/preview.png" />
+
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />   
+  <link rel="preload" as="image" href="assets/amr-profile.webp" type="image/webp" fetchpriority="high" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #080c14;
+      --bg2: #0d1220;
+      --card: rgba(255,255,255,.045);
+      --card2: rgba(255,255,255,.065);
+      --border: rgba(255,255,255,.09);
+      --accent: #63b3ed;
+      --accent2: #7c3aed;
+      --text: #f0f4ff;
+      --muted: #8892a4;
+      --success: #25d366;
+      --danger: #f87171;
+      --r: 18px;
+      --g: linear-gradient(135deg,#63b3ed,#7c3aed);
+      --font-ar: 'Cairo', sans-serif;
+      --font-en: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    /* Bilingual Typography Logic */
+    html[lang="ar"] body { font-family: var(--font-ar); }
+    html[lang="en"] body { font-family: var(--font-en); }
+    
+    html[lang="ar"] input, html[lang="ar"] textarea, html[lang="ar"] button { font-family: var(--font-ar); }
+    html[lang="en"] input, html[lang="en"] textarea, html[lang="en"] button { font-family: var(--font-en); }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(99,179,237,.09), transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(124,58,237,.09), transparent 35%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Language Transition Smoother */
+    [data-i18n], [data-i18n-ph] {
+      transition: opacity 0.25s ease-in-out;
+    }
+    body.lang-transitioning [data-i18n], 
+    body.lang-transitioning [data-i18n-ph]::placeholder {
+      opacity: 0;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(1120px, 92%); margin: auto; }
+
+    /* Accessibility */
+    .skip-link {
+      position: absolute;
+      top: -50px;
+      background: var(--accent);
+      color: #07111f;
+      padding: 10px 14px;
+      border-radius: 10px;
+      z-index: 999;
+      font-weight: 800;
+      transition: .2s;
+    }
+    html[dir="rtl"] .skip-link { right: 20px; }
+    html[dir="ltr"] .skip-link { left: 20px; }
+    .skip-link:focus { top: 15px; }
+
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 50;
+      padding: 18px 0;
+      transition: .3s;
+    }
+    nav.scrolled {
+      background: rgba(8,12,20,.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 1.25rem;
+      background: var(--g);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      white-space: nowrap;
+    }
+
+    .links {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .links a {
+      color: var(--muted);
+      padding: 7px 13px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: .2s;
+    }
+    html[lang="ar"] .links a { font-weight: 700; }
+    .links a:hover, .links a.active {
+      color: var(--accent);
+      background: rgba(99,179,237,.08);
+    }
+
+    .lang-switcher {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.25s ease;
+      margin: 0 10px;
+    }
+    .lang-switcher:hover {
+      background: rgba(99,179,237,.15);
+      color: var(--accent);
+      border-color: rgba(99,179,237,.3);
+    }
+
+    .hamb {
+      display: none;
+      background: none;
+      border: 0;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .mobile {
+      display: none;
+      position: fixed;
+      top: 62px;
+      right: 0; left: 0;
+      background: rgba(8,12,20,.97);
+      backdrop-filter: blur(18px);
+      z-index: 45;
+      padding: 15px;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile.open { display: grid; gap: 5px; }
+    .mobile a, .mobile button {
+      padding: 12px;
+      border-radius: 12px;
+      color: var(--muted);
+      font-weight: 700;
+      text-align: inherit;
+      background: transparent;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .mobile a:hover, .mobile button:hover {
+      background: rgba(99,179,237,.08);
+      color: var(--accent);
+    }
+
+    section { padding: 95px 0; position: relative; }
+
+    .hero { min-height: 100vh; display: grid; place-items: center; padding-top: 130px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: center; }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--accent); background: rgba(99,179,237,.1);
+      border: 1px solid rgba(99,179,237,.2);
+      padding: 6px 16px; border-radius: 999px;
+      font-weight: 700; font-size: 0.9rem; margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.15; margin-bottom: 12px;
+      background: linear-gradient(135deg,#fff,#93c5fd);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      font-weight: 800;
+    }
+
+    .hero-title {
+      color: var(--accent); font-weight: 700; font-size: 1.25rem; margin-bottom: 16px;
+    }
+    html[lang="ar"] .hero-title { font-weight: 900; }
+
+    .hero p { color: var(--muted); max-width: 560px; font-size: 1.05rem; }
+
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; margin: 28px 0; }
+    .badge {
+      border: 1px solid var(--border); background: rgba(255,255,255,.05);
+      padding: 5px 12px; border-radius: 8px; color: var(--muted);
+      font-weight: 700; font-size: .8rem;
+    }
+
+    .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 25px; border-radius: 12px; font-weight: 700;
+      transition: .25s; border: 1px solid transparent;
+    }
+    html[lang="ar"] .btn { font-weight: 900; }
+    .btn:hover { transform: translateY(-2px); }
+    
+    .primary { background: var(--g); color: #07111f; box-shadow: 0 10px 35px rgba(99,179,237,.18); }
+    .secondary { border-color: var(--border); background: rgba(255,255,255,.03); }
+    .secondary:hover { border-color: rgba(99,179,237,.3); color: var(--text); }
+
+    .profile {
+      width: 320px; height: 320px; border-radius: 50%; margin: auto; position: relative;
+      background: var(--g); padding: 5px; box-shadow: 0 20px 70px rgba(0,0,0,.45);
+      animation: float 5s ease-in-out infinite;
+    }
+    .profile::after {
+      content: ""; position: absolute; inset: -18px; border-radius: 50%;
+      border: 1px solid rgba(99,179,237,.18); z-index: -1;
+    }
+    .profile img {
+      width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 8px solid #0b1020;
+    }
+
+    @keyframes float { 50% { transform: translateY(-14px); } }
+
+    .head { text-align: center; margin-bottom: 55px; }
+    .tag {
+      display: inline-block; color: var(--accent); background: rgba(99,179,237,.1);
+      border: 1px solid rgba(99,179,237,.2); padding: 4px 14px; border-radius: 999px;
+      font-weight: 700; font-size: .8rem; margin-bottom: 12px; text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .head h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; }
+    .head p { color: var(--muted); max-width: 650px; margin: 10px auto 0; font-size: 1.05rem; }
+    .line { width: 50px; height: 3px; background: var(--g); border-radius: 5px; margin: 15px auto; }
+
+    .bg2 { background: var(--bg2); }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: center; }
+
+    .about h3 { font-size: 1.45rem; margin-bottom: 12px; font-weight: 700; }
+    .about p { color: var(--muted); margin-bottom: 14px; }
+
+    .stats { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; margin-top: 25px; }
+    .stat, .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--r);
+      padding: 22px; transition: .25s;
+    }
+    .card:hover, .stat:hover {
+      background: var(--card2); transform: translateY(-4px); border-color: rgba(99,179,237,.22);
+    }
+    .num {
+      font-size: 2rem; font-weight: 900; background: var(--g);
+      -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1.2;
+    }
+    .stat span { color: var(--muted); font-weight: 600; font-size: 0.95rem; }
+
+    /* Fix code block flow regardless of page direction */
+    .code {
+      direction: ltr !important; text-align: left !important;
+      font-family: Consolas, Monaco, monospace; white-space: pre-wrap; color: #cbd5e1; overflow-x: auto;
+    }
+
+    .skills, .projects, .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 18px; }
+    .skill { text-align: center; }
+    .skill .ico { font-size: 2rem; margin-bottom: 8px; }
+    .skill b, .card h3 { display: block; margin-bottom: 8px; font-size: 1.1rem; font-weight: 700; }
+    .card p, .skill p { color: var(--muted); font-size: .94rem; }
+    
+    .tech { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+    .tech span {
+      font-size: .75rem; color: var(--accent); background: rgba(99,179,237,.08);
+      border: 1px solid rgba(99,179,237,.15); padding: 3px 9px; border-radius: 7px; font-weight: 600;
+    }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 35px; }
+    .contact-info h3 { margin-bottom: 8px; font-size: 1.35rem; font-weight: 700; }
+    .contact-info p { color: var(--muted); margin-bottom: 18px; }
+    
+    .contact-card {
+      display: flex; gap: 12px; align-items: center; margin-bottom: 12px;
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 15px; color: var(--muted); transition: .2s; word-break: break-word;
+    }
+    .contact-card:hover { color: var(--accent); border-color: rgba(99,179,237,.25); transform: translateY(-2px); }
+
+    form { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 28px; }
+    label { display: block; color: var(--muted); font-weight: 600; margin: 10px 0 6px; font-size: 0.95rem; }
+    html[lang="ar"] label { font-weight: 800; }
+    
+    input, textarea {
+      width: 100%; padding: 13px; border-radius: 12px; border: 1px solid var(--border);
+      background: rgba(255,255,255,.04); color: var(--text); outline: none; transition: .2s;
+    }
+    input:focus, textarea:focus { border-color: rgba(99,179,237,.45); box-shadow: 0 0 0 3px rgba(99,179,237,.08); }
+    textarea { min-height: 130px; resize: vertical; }
+    
+    .submit {
+      width: 100%; margin-top: 14px; padding: 13px; border: 0; border-radius: 12px;
+      background: var(--g); font-weight: 700; color: #07111f; cursor: pointer; transition: .2s; font-size: 1rem;
+    }
+    html[lang="ar"] .submit { font-weight: 900; }
+    .submit:hover { transform: translateY(-2px); }
+    .submit:disabled { opacity: .65; cursor: not-allowed; transform: none; }
+
+    .wa {
+      display: block; text-align: center; margin-top: 10px; border: 1px solid rgba(37,211,102,.3);
+      border-radius: 12px; padding: 12px; color: #fff; background: rgba(37,211,102,.12);
+      font-weight: 700; transition: .2s; font-size: 1rem;
+    }
+    .wa:hover { background: rgba(37,211,102,.18); transform: translateY(-2px); }
+
+    .status { display: none; margin-top: 12px; padding: 12px; border-radius: 12px; font-weight: 600; font-size: 0.95rem; }
+    .ok { display: block; background: rgba(16,185,129,.1); color: #6ee7b7; border: 1px solid rgba(16,185,129,.18); }
+    .err { display: block; background: rgba(248,113,113,.1); color: #fca5a5; border: 1px solid rgba(248,113,113,.18); }
+
+    footer { text-align: center; padding: 28px; border-top: 1px solid var(--border); color: var(--muted); }
+    .footer-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+    .footer-links a { color: var(--muted); font-weight: 600; transition: 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+
+    .reveal { opacity: 0; transform: translateY(25px); transition: .65s; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    @media (max-width: 850px) {
+      .links { display: none; }
+      .hamb { display: block; }
+      .hero-grid, .grid2, .contact-grid { grid-template-columns: 1fr; text-align: center; }
+      .profile { width: 240px; height: 240px; order: -1; }
+      .btns, .badges, .tech { justify-content: center; }
+      html[dir="rtl"] .contact-grid { text-align: right; }
+      html[dir="ltr"] .contact-grid { text-align: left; }
+      section { padding: 75px 0; }
+    }
+
+    @media (max-width: 480px) {
+      .stats { grid-template-columns: 1fr; }
+      .btn { width: 100%; }
+      .hero { padding-top: 110px; }
+      form { padding: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip_link">تخطي إلى المحتوى</a>
+
+  <nav id="nav" aria-label="Main Navigation">
+    <div class="container nav-inner">
+      <a class="logo" href="#hero">Amr Eleraky</a>
+
+      <div class="links" role="navigation">
+        <a class="active" href="#hero" data-i18n="nav_home">الرئيسية</a>
+        <a href="#about" data-i18n="nav_about">من أنا</a>
+        <a href="#skills" data-i18n="nav_skills">المهارات</a>
+        <a href="#projects" data-i18n="nav_projects">المشاريع</a>
+        <a href="#services" data-i18n="nav_services">الخدمات</a>
+        <a href="#contact" data-i18n="nav_contact">تواصل معي</a>
+        <button class="lang-switcher toggle-btn" aria-label="Toggle Language">English</button>
+      </div>
+
+      <div style="display:flex; align-items:center; gap: 10px;">
+        <button class="lang-switcher toggle-btn" style="display:none;" id="mobile-lang-btn" aria-label="Toggle Language">EN</button>
+        <button class="hamb" id="hamb" aria-label="Menu" aria-expanded="false" aria-controls="mobile">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile" id="mobile" aria-label="Mobile Menu">
+    <a href="#hero" data-i18n="nav_home">الرئيسية</a>
+    <a href="#about" data-i18n="nav_about">من أنا</a>
+    <a href="#skills" data-i18n="nav_skills">المهارات</a>
+    <a href="#projects" data-i18n="nav_projects">المشاريع</a>
+    <a href="#services" data-i18n="nav_services">الخدمات</a>
+    <a href="#contact" data-i18n="nav_contact">تواصل معي</a>
+    <button class="toggle-btn" style="text-align:center; margin-top: 10px; border: 1px solid var(--border);">English</button>
+  </div>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow" data-i18n="hero_eyebrow">متاح للعمل على مشاريع برمجية</span>
+
+          <h1 data-i18n="hero_greeting">مرحبًا، أنا<br>عمرو العراقي</h1>
+
+          <div class="hero-title" data-i18n="hero_title">مطوّر برمجيات Python وFull Stack</div>
+
+          <p data-i18n="hero_desc">
+            أبني أنظمة إدارة وتطبيقات ويب وسطح مكتب تساعد الشركات والمراكز التعليمية على تنظيم العمل،
+            تقليل الأخطاء، إدارة البيانات، وتوفير الوقت من خلال حلول عملية قابلة للتطوير.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Python Engineer</span>
+            <span class="badge">Full Stack</span>
+            <span class="badge">ERP / CRM</span>
+            <span class="badge">Enterprise Architecture</span>
+            <span class="badge">React / Node.js</span>
+          </div>
+
+          <div class="btns">
+            <a class="btn primary" href="#contact" data-i18n="btn_contact">تواصل معي</a>
+            <a class="btn secondary" href="#projects" data-i18n="btn_projects">مشاهدة الأعمال</a>
+            <a class="btn secondary" href="https://github.com/amreleraky57-arch" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <div class="profile reveal">
+          <img src="assets/amr-profile.webp" alt="Amr Eleraky - Software Engineer" width="320" height="320" loading="eager" fetchpriority="high" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg2 about" id="about">
+      <div class="container">
+        <div class="head reveal">
+          <span class="tag" data-i18n="tag_about">من أنا</span>
+          <h2 data-i18n="about_heading">مطوّر يحل مشاكل حقيقية</h2>
+          <p data-i18n="about_sub">أركز على بناء أنظمة عملية للشركات والمراكز التعليمية بدل الحلول الشكلية فقط.</p>
+          <div class="line"></div>
+        </div>
+
+        <div class="grid2">
+          <div class="reveal">
+            <h3 data-i18n="about_h3">أبني برمجيات تُحدث فرقًا</h3>
+            <p data-i18n="about_p1">أعمل على تطوير حلول برمجية تخدم احتياجات العمل الفعلية، مثل إدارة الطلاب، المدفوعات، العملاء، المتابعات، التقارير، ولوحات التحكم.</p>
+            <p data-i18n="about_p2">خبرتي تشمل بناء أنظمة ERP وCRM، تطبيقات سطح مكتب باستخدام Python وCustomTkinter، ومنصات ويب باستخدام React وNode.js وExpress وMongoDB.</p>
+            <p data-i18n="about_p3">هدفي هو تحويل المشاكل اليومية المتكررة إلى أدوات سهلة الاستخدام، منظمة، وقابلة للتطوير.</p>
+
+            <div class="stats">
+              <div class="stat">
+                <div class="num">+12</div>
+                <span data-i18n="stat_projects">مشاريع عملية</span>
+              </div>
+              <div class="stat">
+                <div class="num">+4</div>
+                <span data-i18n="stat_exp">سنوات تطوير</span>
+              </div>
+              <div class="stat">
+                <div class="num">ERP</div>
+                <span data-i18n="stat_systems">أنظمة مؤسسية</span>
+              </div>
+              <div class="stat">
+                <div class="num">API</div>
+                <span data-i18n="stat_stack">Full Stack</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card code reveal" aria-label="Developer JSON">
+{
+  "name": "Amr Eleraky",
+  "role": "Software Engineer",
+  "focus": [
+    "Enterprise ERP/CRM",
+    "Scalable APIs",
+    "Desktop Architecture",
+    "Data Structuring"
+  ],
+  "stack": [
+    "Python",
+    "JavaScript",
+    "React",
+    "Node.js",
+    "Express.js",
+    "SQLite",
+    "MongoDB"
+  ],
+  "openForWork": true
+}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="head reveal">
+          <span class="tag" data-i18n="tag_skills">المهارات</span>
+          <h2 data-i18n="skills_heading">التقنيات التي أستخدمها</h2>
+          <p data-i18n="skills_sub">مجموعة أدوات هندسية لبناء تطبيقات قابلة للتوسع من الواجهة إلى قاعدة البيانات.</p>
+          <div class="line"></div>
+        </div>
+
+        <div class="skills">
+          <article class="card skill reveal">
+            <div class="ico" aria-hidden="true">🐍</div>
+            <b>Python</b>
+            <p data-i18n="skill_py">تطبيقات سطح مكتب، أتمتة، منطق الأنظمة، والتعامل مع قواعد البيانات.</p>
+          </article>
+          <article class="card skill reveal">
+            <div class="ico" aria-hidden="true">⚡</div>
+            <b>JavaScript</b>
+            <p data-i18n="skill_js">واجهات تفاعلية ومنطق Frontend للمواقع ولوحات التحكم.</p>
+          </article>
+          <article class="card skill reveal">
+            <div class="ico" aria-hidden="true">⚛️</div>
+            <b>React</b>
+            <p data-i18n="skill_react">بناء واجهات حديثة ولوحات تحكم مؤسسية قابلة للتوسع.</p>
+          </article>
+          <article class="card skill reveal">
+            <div class="ico" aria-hidden="true">🟢</div>
+            <b>Node.js / Express</b>
+            <p data-i18n="skill_node">تطوير REST APIs متقدمة وخدمات Backend آمنة.</p>
+          </article>
+          <article class="card skill reveal">
+            <div class="ico" aria-hidden="true">🗄️</div>
+            <b>SQLite / MongoDB</b>
+            <p data-i18n="skill_db">تصميم بنية قواعد بيانات موثوقة وتقارير وتحليلات متقدمة.</p>
+          </article>
+          <article class="card skill reveal">
+            <div class="ico" aria-hidden="true">🖥️</div>
+            <b>CustomTkinter</b>
+            <p data-i18n="skill_tk">هندسة تطبيقات سطح مكتب حديثة تعمل محلياً بكفاءة عالية.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg2" id="projects">
+      <div class="container">
+        <div class="head reveal">
+          <span class="tag" data-i18n="tag_projects">المشاريع</span>
+          <h2 data-i18n="projects_heading">مشاريع مختارة</h2>
+          <p data-i18n="projects_sub">أمثلة على أنظمة وتطبيقات صُممت لحل تحديات تجارية وإدارية حقيقية.</p>
+          <div class="line"></div>
+        </div>
+
+        <div class="projects">
+          <article class="card reveal">
+            <h3>Smart Center ERP</h3>
+            <p data-i18n="proj_erp">نظام متكامل لإدارة المراكز التعليمية: الطلاب، المدفوعات، الحضور، التقارير المتقدمة وصلاحيات الموظفين.</p>
+            <div class="tech"><span>Python</span><span>SQLite</span><span>CustomTkinter</span><span>ERP</span></div>
+          </article>
+
+          <article class="card reveal">
+            <h3>Smart Sender CRM</h3>
+            <p data-i18n="proj_crm">منصة CRM احترافية لتنظيم بيانات العملاء، المتابعات الدورية، سجل الأنشطة، وقوالب التواصل السريعة.</p>
+            <div class="tech"><span>Python</span><span>SQLite</span><span>CRM</span><span>Automation</span></div>
+          </article>
+
+          <article class="card reveal">
+            <h3>MERN Dashboard</h3>
+            <p data-i18n="proj_mern">لوحة تحكم سحابية آمنة لإدارة قواعد البيانات والمستخدمين مبنية بتقنيات الويب الحديثة.</p>
+            <div class="tech"><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
+          </article>
+
+          <article class="card reveal">
+            <h3>Enterprise Desktop Apps</h3>
+            <p data-i18n="proj_desktop">برامج سطح مكتب سريعة ومخصصة لأتمتة العمليات اليومية للشركات، معتمدة على قواعد بيانات مشفرة ومحلية.</p>
+            <div class="tech"><span>Python</span><span>SQLite</span><span>Data Structuring</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="head reveal">
+          <span class="tag" data-i18n="tag_services">الخدمات</span>
+          <h2 data-i18n="services_heading">كيف يمكنني مساعدة أعمالك؟</h2>
+          <p data-i18n="services_sub">إذا كنت تبحث عن ترقية عمليات شركتك برمجياً، يمكنني بناء وتطوير الحل الهندسي المناسب.</p>
+          <div class="line"></div>
+        </div>
+
+        <div class="services">
+          <article class="card reveal">
+            <h3 data-i18n="srv_erp_t">أنظمة ERP / CRM</h3>
+            <p data-i18n="srv_erp_d">منصات إدارة أعمال متكاملة مصممة خصيصاً لسير عملك، مزودة بتقارير دقيقة ونظام صلاحيات.</p>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="srv_desk_t">تطبيقات سطح مكتب</h3>
+            <p data-i18n="srv_desk_d">برمجيات عالية الأداء تعمل بدون الحاجة لإنترنت، مع الحفاظ على البيانات آمنة محلياً.</p>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="srv_web_t">لوحات تحكم ويب</h3>
+            <p data-i18n="srv_web_d">بناء Dashboards مركزية لعرض وتحليل وإدارة بيانات شركتك سحابياً.</p>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="srv_site_t">منصات الأعمال</h3>
+            <p data-i18n="srv_site_d">مواقع شركات سريعة وعصرية، مُحسنة لمحركات البحث ومصممة لجذب العملاء.</p>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="srv_db_t">هندسة قواعد البيانات</h3>
+            <p data-i18n="srv_db_d">تصميم هياكل قواعد بيانات قابلة للتوسع وتوليد تقارير مالية وإدارية ذكية.</p>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="srv_auto_t">أتمتة العمليات</h3>
+            <p data-i18n="srv_auto_d">برمجة نصوص Python مخصصة لاختصار مئات الساعات من المهام اليدوية المتكررة.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg2" id="contact">
+      <div class="container">
+        <div class="head reveal">
+          <span class="tag" data-i18n="tag_contact">تواصل معي</span>
+          <h2 data-i18n="contact_heading">لديك مشروع؟ دعنا نتحدث</h2>
+          <p data-i18n="contact_sub">شاركني فكرة نظامك أو التحدي التقني الذي تواجهه، وسأزودك بأفضل استراتيجية للتنفيذ.</p>
+          <div class="line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h3 data-i18n="contact_h3">قنوات التواصل</h3>
+            <p data-i18n="contact_p">يمكنك التواصل معي مباشرة للمناقشة التقنية عبر البريد أو منصات الأعمال.</p>
+
+            <a class="contact-card" href="mailto:amreleraky001@gmail.com">
+              <span aria-hidden="true">📧</span> <span>amreleraky001@gmail.com</span>
+            </a>
+            <a class="contact-card" href="https://wa.me/201028542172" target="_blank" rel="noopener noreferrer">
+              <span aria-hidden="true">💬</span> <span dir="ltr">+20 102 854 2172</span>
+            </a>
+            <a class="contact-card" href="https://www.linkedin.com/in/amr-eleraky-bb9492391/" target="_blank" rel="noopener noreferrer">
+              <span aria-hidden="true">🔗</span> <span>LinkedIn: Amr Eleraky</span>
+            </a>
+            <a class="contact-card" href="https://github.com/amreleraky57-arch" target="_blank" rel="noopener noreferrer">
+              <span aria-hidden="true">💻</span> <span>GitHub: amreleraky57-arch</span>
+            </a>
+          </div>
+
+          <form id="contactForm" class="reveal">
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
+
+            <label for="from_name" data-i18n="form_lbl_name">الاسم</label>
+            <input id="from_name" name="from_name" required data-i18n-ph="form_ph_name" placeholder="الاسم الكريم" autocomplete="name" />
+
+            <label for="from_email" data-i18n="form_lbl_email">البريد الإلكتروني</label>
+            <input id="from_email" name="from_email" type="email" required data-i18n-ph="form_ph_email" placeholder="example@company.com" dir="ltr" autocomplete="email" />
+
+            <label for="subject" data-i18n="form_lbl_subj">الموضوع</label>
+            <input id="subject" name="subject" required data-i18n-ph="form_ph_subj" placeholder="فكرة المشروع أو الاستفسار" />
+
+            <label for="message" data-i18n="form_lbl_msg">الرسالة</label>
+            <textarea id="message" name="message" required minlength="10" data-i18n-ph="form_ph_msg" placeholder="اكتب تفاصيل النظام المطلوب هنا..."></textarea>
+
+            <button class="submit" id="submitBtn" type="submit" data-i18n="form_btn">إرسال الرسالة</button>
+
+            <a class="wa" href="https://wa.me/201028542172" target="_blank" rel="noopener noreferrer" data-i18n="form_wa">تواصل سريع عبر واتساب</a>
+
+            <div class="status" id="status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#hero" data-i18n="nav_home">الرئيسية</a>
+      <a href="#projects" data-i18n="nav_projects">المشاريع</a>
+      <a href="#contact" data-i18n="nav_contact">تواصل معي</a>
+      <a href="https://github.com/amreleraky57-arch" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/amr-eleraky-bb9492391/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+    <p>© <span id="year">2026</span> Amr Eleraky. <span data-i18n="footer_rights">جميع الحقوق محفوظة.</span></p>
+  </footer>
+
+  <script>
+    /* --- i18n Dictionary --- */
+    const translations = {
+      en: {
+        "meta_title": "Amr Eleraky | Software Engineer - Python, ERP & CRM",
+        "meta_desc": "Official portfolio of Amr Eleraky, Software Engineer specializing in Python, React, Node.js, and custom enterprise ERP/CRM solutions.",
+        "skip_link": "Skip to content",
+        "nav_home": "Home",
+        "nav_about": "About",
+        "nav_skills": "Tech Stack",
+        "nav_projects": "Projects",
+        "nav_services": "Services",
+        "nav_contact": "Contact",
+        "hero_eyebrow": "Available for software projects",
+        "hero_greeting": "Hi, I'm<br>Amr Eleraky",
+        "hero_title": "Python & Full Stack Software Engineer",
+        "hero_desc": "I architect and build enterprise management systems, secure web platforms, and offline desktop applications. I help businesses streamline operations, eliminate data silos, and scale efficiently.",
+        "btn_contact": "Get in Touch",
+        "btn_projects": "View Portfolio",
+        "tag_about": "About Me",
+        "about_heading": "Engineering Real-World Business Value",
+        "about_sub": "I focus on delivering scalable, functional infrastructure for companies rather than just superficial web presences.",
+        "about_h3": "I Build Software That Makes a Difference",
+        "about_p1": "My expertise lies in developing robust solutions that address core operational bottlenecks: managing data flow, financial tracking, client relationships, and team roles.",
+        "about_p2": "I engineer complex ERP & CRM architectures, high-performance offline desktop software (Python/CustomTkinter), and scalable MERN stack web applications (React, Node.js, Express, MongoDB).",
+        "about_p3": "My ultimate goal is transforming repetitive, manual business workflows into streamlined, automated, and highly reliable digital tools.",
+        "stat_projects": "Production Systems",
+        "stat_exp": "Years Experience",
+        "stat_systems": "Enterprise Software",
+        "stat_stack": "Full Stack Dev",
+        "tag_skills": "Tech Stack",
+        "skills_heading": "Technologies I Leverage",
+        "skills_sub": "A highly specialized toolkit designed to construct robust enterprise applications from database to interface.",
+        "skill_py": "Desktop application architecture, workflow automation, backend logic, and complex data engineering.",
+        "skill_js": "Dynamic frontend logic and seamless interactive experiences for modern enterprise dashboards.",
+        "skill_react": "Architecting scalable, component-driven user interfaces and complex administrative control panels.",
+        "skill_node": "Developing highly scalable RESTful APIs, microservices, and secure backend routing architectures.",
+        "skill_db": "Designing highly optimized database schemas, ensuring data integrity, and generating intelligent analytics.",
+        "skill_tk": "Engineering cross-platform, accessible, and offline-first desktop applications with local secure storage.",
+        "tag_projects": "Selected Projects",
+        "projects_heading": "Featured Engineering Work",
+        "projects_sub": "Production-grade systems and applications built to solve complex administrative and commercial challenges.",
+        "proj_erp": "Comprehensive educational center architecture managing student lifecycles, payroll, attendance tracking, and strict RBAC (Role-Based Access Control).",
+        "proj_crm": "An enterprise CRM platform designed to organize client data, schedule intelligent follow-ups, maintain activity logs, and automate communication templates.",
+        "proj_mern": "A highly secure, cloud-based administrative dashboard for managing complex hierarchical data and user permissions, engineered with the MERN stack.",
+        "proj_desktop": "High-performance, bespoke desktop applications for SME daily operations, fully integrated with heavily encrypted local SQL databases.",
+        "tag_services": "Solutions",
+        "services_heading": "How I Can Scale Your Business",
+        "services_sub": "If your agency, startup, or enterprise requires robust digital infrastructure, I provide the precise technical execution.",
+        "srv_erp_t": "Custom ERP / CRM Solutions",
+        "srv_erp_d": "Fully integrated business management platforms tailored strictly to your operational workflows with advanced analytics.",
+        "srv_desk_t": "Enterprise Desktop Software",
+        "srv_desk_d": "High-performance, offline-capable Python software operating securely on local environments without reliance on cloud uptime.",
+        "srv_web_t": "Admin Dashboards & Portals",
+        "srv_web_d": "Centralized, real-time data visualization portals built with modern frameworks to oversee your entire business landscape.",
+        "srv_site_t": "Corporate Web Platforms",
+        "srv_site_d": "Lightning-fast, highly responsive websites optimized for technical SEO and designed to maximize client conversion rates.",
+        "srv_db_t": "Database & Analytics Architecture",
+        "srv_db_d": "Designing normalized database structures and deploying exportable, dynamic reporting engines to monitor KPIs.",
+        "srv_auto_t": "Business Process Automation",
+        "srv_auto_d": "Custom algorithmic scripts designed to instantly execute hundreds of manual tasks, drastically reducing human error and overhead.",
+        "tag_contact": "Contact",
+        "contact_heading": "Have a project in mind? Let's connect.",
+        "contact_sub": "Detail your business requirements or operational bottlenecks, and I will outline the optimal technical strategy.",
+        "contact_h3": "Direct Communication",
+        "contact_p": "Reach out directly for technical consultations via email or professional networks.",
+        "form_lbl_name": "Full Name",
+        "form_ph_name": "e.g. John Doe",
+        "form_lbl_email": "Corporate Email",
+        "form_ph_email": "name@company.com",
+        "form_lbl_subj": "Inquiry Subject",
+        "form_ph_subj": "Project Scope / System Requirements",
+        "form_lbl_msg": "Project Details",
+        "form_ph_msg": "Please describe the software solution you are looking to build...",
+        "form_btn": "Submit Inquiry",
+        "form_wa": "Quick Consult via WhatsApp",
+        "footer_rights": "All rights reserved.",
+        "msg_err_validate": "Please ensure all fields are correct and message is at least 10 characters.",
+        "msg_sending": "Transmitting...",
+        "msg_success": "Inquiry submitted successfully. I will be in touch shortly.",
+        "msg_fail": "Transmission failed. Please reach out directly via WhatsApp.",
+        "msg_mailto": "Redirecting to your default email client..."
+      },
+      ar: {
+        "meta_title": "عمرو العراقي | مطوّر برمجيات Python وFull Stack لأنظمة ERP وCRM",
+        "meta_desc": "عمرو العراقي مطوّر برمجيات متخصص في بناء أنظمة ERP وCRM، تطبيقات سطح مكتب Python، لوحات تحكم React وNode.js، وقواعد بيانات SQLite وMongoDB للشركات والمراكز التعليمية.",
+        "skip_link": "تخطي إلى المحتوى",
+        "nav_home": "الرئيسية",
+        "nav_about": "من أنا",
+        "nav_skills": "المهارات",
+        "nav_projects": "المشاريع",
+        "nav_services": "الخدمات",
+        "nav_contact": "تواصل معي",
+        "hero_eyebrow": "متاح للعمل على مشاريع برمجية",
+        "hero_greeting": "مرحبًا، أنا<br>عمرو العراقي",
+        "hero_title": "مطوّر برمجيات Python وFull Stack",
+        "hero_desc": "أبني أنظمة إدارة وتطبيقات ويب وسطح مكتب تساعد الشركات والمراكز التعليمية على تنظيم العمل، تقليل الأخطاء، إدارة البيانات، وتوفير الوقت من خلال حلول عملية قابلة للتطوير.",
+        "btn_contact": "تواصل معي",
+        "btn_projects": "مشاهدة الأعمال",
+        "tag_about": "من أنا",
+        "about_heading": "مطوّر يحل مشاكل حقيقية",
+        "about_sub": "أركز على بناء أنظمة عملية للشركات والمراكز التعليمية بدل الحلول الشكلية فقط.",
+        "about_h3": "أبني برمجيات تُحدث فرقًا",
+        "about_p1": "أعمل على تطوير حلول برمجية تخدم احتياجات العمل الفعلية، مثل إدارة الطلاب، المدفوعات، العملاء، المتابعات، التقارير، ولوحات التحكم.",
+        "about_p2": "خبرتي تشمل بناء أنظمة ERP وCRM، تطبيقات سطح مكتب باستخدام Python وCustomTkinter، ومنصات ويب باستخدام React وNode.js وExpress وMongoDB.",
+        "about_p3": "هدفي هو تحويل المشاكل اليومية المتكررة إلى أدوات سهلة الاستخدام، منظمة، وقابلة للتطوير.",
+        "stat_projects": "مشاريع عملية",
+        "stat_exp": "سنوات تطوير",
+        "stat_systems": "أنظمة مؤسسية",
+        "stat_stack": "Full Stack",
+        "tag_skills": "المهارات",
+        "skills_heading": "التقنيات التي أستخدمها",
+        "skills_sub": "مجموعة أدوات هندسية لبناء تطبيقات قابلة للتوسع من الواجهة إلى قاعدة البيانات.",
+        "skill_py": "تطبيقات سطح مكتب، أتمتة، منطق الأنظمة، والتعامل مع قواعد البيانات.",
+        "skill_js": "واجهات تفاعلية ومنطق Frontend للمواقع ولوحات التحكم.",
+        "skill_react": "بناء واجهات حديثة ولوحات تحكم مؤسسية قابلة للتوسع.",
+        "skill_node": "تطوير REST APIs متقدمة وخدمات Backend آمنة.",
+        "skill_db": "تصميم بنية قواعد بيانات موثوقة وتقارير وتحليلات متقدمة.",
+        "skill_tk": "هندسة تطبيقات سطح مكتب حديثة تعمل محلياً بكفاءة عالية.",
+        "tag_projects": "المشاريع",
+        "projects_heading": "مشاريع مختارة",
+        "projects_sub": "أمثلة على أنظمة وتطبيقات صُممت لحل تحديات تجارية وإدارية حقيقية.",
+        "proj_erp": "نظام متكامل لإدارة المراكز التعليمية: الطلاب، المدفوعات، الحضور، التقارير المتقدمة وصلاحيات الموظفين.",
+        "proj_crm": "منصة CRM احترافية لتنظيم بيانات العملاء، المتابعات الدورية، سجل الأنشطة، وقوالب التواصل السريعة.",
+        "proj_mern": "لوحة تحكم سحابية آمنة لإدارة قواعد البيانات والمستخدمين مبنية بتقنيات الويب الحديثة.",
+        "proj_desktop": "برامج سطح مكتب سريعة ومخصصة لأتمتة العمليات اليومية للشركات، معتمدة على قواعد بيانات مشفرة ومحلية.",
+        "tag_services": "الخدمات",
+        "services_heading": "كيف يمكنني مساعدة أعمالك؟",
+        "services_sub": "إذا كنت تبحث عن ترقية عمليات شركتك برمجياً، يمكنني بناء وتطوير الحل الهندسي المناسب.",
+        "srv_erp_t": "أنظمة ERP / CRM",
+        "srv_erp_d": "منصات إدارة أعمال متكاملة مصممة خصيصاً لسير عملك، مزودة بتقارير دقيقة ونظام صلاحيات.",
+        "srv_desk_t": "تطبيقات سطح مكتب",
+        "srv_desk_d": "برمجيات عالية الأداء تعمل بدون الحاجة لإنترنت، مع الحفاظ على البيانات آمنة محلياً.",
+        "srv_web_t": "لوحات تحكم ويب",
+        "srv_web_d": "بناء Dashboards مركزية لعرض وتحليل وإدارة بيانات شركتك سحابياً.",
+        "srv_site_t": "منصات الأعمال",
+        "srv_site_d": "مواقع شركات سريعة وعصرية، مُحسنة لمحركات البحث ومصممة لجذب العملاء.",
+        "srv_db_t": "هندسة قواعد البيانات",
+        "srv_db_d": "تصميم هياكل قواعد بيانات قابلة للتوسع وتوليد تقارير مالية وإدارية ذكية.",
+        "srv_auto_t": "أتمتة العمليات",
+        "srv_auto_d": "برمجة نصوص Python مخصصة لاختصار مئات الساعات من المهام اليدوية المتكررة.",
+        "tag_contact": "تواصل معي",
+        "contact_heading": "لديك مشروع؟ دعنا نتحدث",
+        "contact_sub": "شاركني فكرة نظامك أو التحدي التقني الذي تواجهه، وسأزودك بأفضل استراتيجية للتنفيذ.",
+        "contact_h3": "قنوات التواصل",
+        "contact_p": "يمكنك التواصل معي مباشرة للمناقشة التقنية عبر البريد أو منصات الأعمال.",
+        "form_lbl_name": "الاسم",
+        "form_ph_name": "الاسم الكريم",
+        "form_lbl_email": "البريد الإلكتروني",
+        "form_ph_email": "example@company.com",
+        "form_lbl_subj": "الموضوع",
+        "form_ph_subj": "فكرة المشروع أو الاستفسار",
+        "form_lbl_msg": "الرسالة",
+        "form_ph_msg": "اكتب تفاصيل النظام المطلوب هنا...",
+        "form_btn": "إرسال الرسالة",
+        "form_wa": "تواصل سريع عبر واتساب",
+        "footer_rights": "جميع الحقوق محفوظة.",
+        "msg_err_validate": "راجع البيانات واكتب رسالة 10 أحرف على الأقل.",
+        "msg_sending": "جاري الإرسال...",
+        "msg_success": "تم إرسال رسالتك بنجاح.",
+        "msg_fail": "حدث خطأ أثناء الإرسال. يمكنك التواصل عبر واتساب.",
+        "msg_mailto": "تم فتح تطبيق البريد الإلكتروني لإرسال الرسالة."
+      }
+    };
+
+    /* --- Language Logic --- */
+    let currentLang = 'ar'; // Default
+
+    function detectLanguage() {
+      const savedLang = localStorage.getItem('site_lang');
+      if (savedLang) return savedLang;
+      const browserLang = navigator.language || navigator.userLanguage;
+      return browserLang.toLowerCase().startsWith('ar') ? 'ar' : 'en';
+    }
+
+    function applyLanguage(lang) {
+      document.body.classList.add('lang-transitioning'); // Start fade out
+
+      setTimeout(() => {
+        currentLang = lang;
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        localStorage.setItem('site_lang', lang);
+
+        // Update Text Content
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang][key]) {
+            el.innerHTML = translations[lang][key]; 
+          }
+        });
+
+        // Update Placeholders
+        document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+          const key = el.getAttribute('data-i18n-ph');
+          if (translations[lang][key]) {
+            el.setAttribute('placeholder', translations[lang][key]);
+          }
+        });
+
+        // Update SEO Metadata
+        if(translations[lang]['meta_title']) {
+          document.title = translations[lang]['meta_title'];
+          document.querySelectorAll('meta[name="twitter:title"], meta[property="og:title"]').forEach(m => m.setAttribute("content", translations[lang]['meta_title']));
+        }
+        if(translations[lang]['meta_desc']) {
+          document.querySelector('meta[name="description"]').setAttribute("content", translations[lang]['meta_desc']);
+          document.querySelectorAll('meta[name="twitter:description"], meta[property="og:description"]').forEach(m => m.setAttribute("content", translations[lang]['meta_desc']));
+        }
+        document.getElementById('og_locale').setAttribute('content', lang === 'ar' ? 'ar_EG' : 'en_US');
+
+        // Toggle Switcher Buttons Text (shows OPPOSITE language to click)
+        document.querySelectorAll('.toggle-btn').forEach(btn => {
+          btn.textContent = lang === 'ar' ? 'English' : 'العربية';
+        });
+
+        // Fix mobile layout issues during direction change
+        document.querySelectorAll('.mobile button').forEach(b => {
+          b.style.textAlign = lang === 'ar' ? 'right' : 'left';
+        });
+
+        // End fade transition
+        setTimeout(() => document.body.classList.remove('lang-transitioning'), 50);
+      }, 250); // wait for fade out
+    }
+
+    // Toggle event listeners
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        applyLanguage(currentLang === 'ar' ? 'en' : 'ar');
+      });
+    });
+
+    // Mobile specific menu setup
+    if(window.innerWidth > 850) {
+      document.getElementById('mobile-lang-btn').style.display = 'block'; 
+    }
+
+    /* --- Form & Status Helper --- */
+    function getFormStatus(key) {
+      return translations[currentLang][key] || key;
+    }
+
+    /* --- Initialization --- */
+    window.addEventListener('DOMContentLoaded', () => {
+      applyLanguage(detectLanguage());
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+
+    /* --- UI Interactivity --- */
+    const nav = document.getElementById("nav");
+    const hamb = document.getElementById("hamb");
+    const mobile = document.getElementById("mobile");
+    const navLinks = document.querySelectorAll(".links a");
+    const sections = document.querySelectorAll("main section[id]");
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        nav.classList.toggle("scrolled", window.scrollY > 40);
+        let current = "hero";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 120;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+        navLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === "#" + current);
+        });
+      },
+      { passive: true }
+    );
+
+    hamb.addEventListener("click", () => {
+      const isOpen = mobile.classList.toggle("open");
+      hamb.setAttribute("aria-expanded", String(isOpen));
+      hamb.textContent = isOpen ? "×" : "☰";
+    });
+
+    mobile.querySelectorAll("a, button.toggle-btn").forEach((el) => {
+      el.addEventListener("click", () => {
+        if(el.tagName === 'A') {
+          mobile.classList.remove("open");
+          hamb.setAttribute("aria-expanded", "false");
+          hamb.textContent = "☰";
+        }
+      });
+    });
+
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
+
+    /* --- EmailJS Logic --- */
+    const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+    const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+    const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+    const configured = EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY";
+
+    window.addEventListener("load", () => {
+      if (configured && window.emailjs) emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    });
+
+    document.getElementById("contactForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const status = document.getElementById("status");
+      const btn = document.getElementById("submitBtn");
+
+      if (document.getElementById("website").value) return; // honeypot
+
+      const name = form.from_name.value.trim();
+      const email = form.from_email.value.trim();
+      const subject = form.subject.value.trim();
+      const message = form.message.value.trim();
+      const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+      if (!name || !emailValid || !subject || message.length < 10) {
+        status.className = "status err";
+        status.textContent = getFormStatus('msg_err_validate');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = getFormStatus('msg_sending');
+
+      if (configured && window.emailjs) {
+        try {
+          await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, { from_name: name, from_email: email, subject: subject, message: message });
+          status.className = "status ok";
+          status.textContent = getFormStatus('msg_success');
+          form.reset();
+        } catch (error) {
+          status.className = "status err";
+          status.textContent = getFormStatus('msg_fail');
+        }
+      } else {
+        const mailSubject = encodeURIComponent(subject);
+        const mailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+        window.location.href = `mailto:amreleraky001@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+        status.className = "status ok";
+        status.textContent = getFormStatus('msg_mailto');
+      }
+
+      btn.disabled = false;
+      btn.textContent = getFormStatus('form_btn');
+    });
+  </script>
+</body>
+</html>
